@@ -9,7 +9,7 @@ df = pd.read_csv('../../datasets/vehicles_us.csv')
 # Encabezado de la apalicacion
 st.header('ANALISIS EXPLORATORIO DE DATOS DE VEHICULOS')
 # Boton para contruir un histograma
-if st.button('Construir histograma')
+if st.button('Construir histograma'):
      st.write("Histograma de la columna  'odometer'")
      if 'odometer' in df.columns:
             fig = px.histogram(df, x='odometer', title='histograma de odometro')
