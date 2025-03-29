@@ -26,4 +26,12 @@ if st.button("construir Scatter Plot"):
     else:
         st.write("las mcolumnas necesarias para el scatter plot no estan disponibles.") 
 
+# Botón para construir un gráfico circular
+if st.button("Construir gráfico circular"):
+    st.write("Gráfico circular sobre las condiciones de los vehículos")
+    if 'condition' in df.columns:
+        fig3 = px.pie(df, names='condition', title='Distribución de Condiciones de los Vehículos')
+        st.plotly_chart(fig3, use_container_width=True)
+    else:
+        st.write("La columna 'condition' no está disponible en los datos.")
             
